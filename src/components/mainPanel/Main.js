@@ -10,6 +10,7 @@ import Presentation from '../common/presentation/containers/Presentation';
 import EditSlidPanel from '../editSlidPanel/containers/EditSlidPanel';
 import { createStore } from 'redux';
 import globalReducer from '../../reducers';
+import { updateContentMap,updatePresentation } from '../../actions';
 import { Provider } from 'react-redux';
 
 const store = createStore(globalReducer);
@@ -23,6 +24,8 @@ export default class Main extends React.Component{
             presMap: presMapTmp.default,
             selectedSlid: "d5616d1f-f81d-4d4a-849a-1ee7148a50bd",
         }
+
+        store.dispatch(updateContentMap(contentMapTmp));
     }
 
     render() {

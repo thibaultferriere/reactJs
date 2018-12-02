@@ -46,4 +46,4 @@ class Slid extends Component{
     }
 }
 
-export default connect(Slid);
+export default connect()(Slid);

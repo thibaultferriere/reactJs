@@ -4,3 +4,10 @@ export const setSelectedSlid=(slid_obj)=>{
         obj:slid_obj
     };
 }
+
+export const updateContentMap=(content_obj)=>{
+    return {
+        type: 'UPDATE_CONTENT_MAP',
+        obj:content_obj
+    };
+}
